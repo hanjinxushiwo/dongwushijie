@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>动物世界</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Microsoft YaHei', sans-serif;
+        }
+        
+        body {
+            background-color: #f5f5f5;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        header {
+            background: linear-gradient(135deg, #4b6cb7, #182848);
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+            margin-bottom: 2rem;
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        nav {
+            background-color: #333;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+        }
+        
+        nav li {
+            padding: 1rem 2rem;
+        }
+        
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+        
+        nav a:hover {
+            color: #4b6cb7;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+        
+        .animal-section {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            padding: 2rem;
+            margin-bottom: 2rem;
+        }
+        
+        h2 {
+            color: #4b6cb7;
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid #eee;
+        }
+        
+        h3 {
+            color: #182848;
+            margin: 1.5rem 0 1rem;
+        }
+        
+        p {
+            margin-bottom: 1rem;
+        }
+        
+        .animal-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 1rem;
+            margin: 1.5rem 0;
+        }
+        
+        .animal-card {
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            overflow: hidden;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .animal-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .animal-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        
+        .animal-card .info {
+            padding: 1rem;
+        }
+        
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1.5rem 0;
+            margin-top: 2rem;
+        }
+        
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .animal-gallery {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>动物世界</h1>
+        <p>探索地球上最迷人的生物</p>
+    </header>
+    
+    <nav>
+        <ul>
+            <li><a href="#primates">灵长类</a></li>
+            <li><a href="#birds">鸟类</a></li>
+            <li><a href="#reptiles">爬行类</a></li>
+            <li><a href="#felines">猫科动物</a></li>
+            <li><a href="#canines">犬科动物</a></li>
+        </ul>
+    </nav>
+    
+    <div class="container">
+        <section id="primates" class="animal-section">
+            <h2>灵长类动物</h2>
+            <p>灵长类是哺乳动物中最高等的一类，包括人类、猿、猴等。它们通常具有发达的大脑、立体的视觉和灵活的手指。</p>
+            
+            <div class="animal-gallery">
+                <div class="animal-card">
+                    <img src="./素材图片/黑猩猩.jpg" alt="黑猩猩">
+                    <div class="info">
+                        <h3>黑猩猩</h3>
+                        <p>黑猩猩是人类最近的亲戚之一，具有高度发达的社会结构和工具使用能力。</p>
+                    </div>
+                </div>
+                
+                <div class="animal-card">
+                    <img src="./素材图片/大猩猩.jpg" alt="大猩猩">
+                    <div class="info">
+                        <h3>大猩猩</h3>
+                        <p>现存最大的灵长类动物，体型庞大但性格温和，主要分布在非洲中部。</p>
+                    </div>
+                </div>
+                
+                <div class="animal-card">
+                    <img src="./素材图片/红毛猩猩.jpg" alt="红毛猩猩">
+                    <div class="info">
+                        <h3>红毛猩猩</h3>
+                        <p>亚洲唯一的大型猿类，生活在婆罗洲和苏门答腊的热带雨林中。</p>
+                    </div>
+                </div>
+            </div>
+            
+            <h3>灵长类动物的特征</h3>
+            <ul>
+                <li>发达的大脑和较高的智力</li>
+                <li>立体视觉和色觉</li>
+                <li>灵活的手指和对握的拇指</li>
+                <li>复杂的社会行为</li>
+                <li>较长的童年期和学习期</li>
+            </ul>
+        </section>
+        
+        <section id="birds" class="animal-section">
+            <h2>鸟类</h2>
+            <p>鸟类是由恐龙演化而来的有羽毛的脊椎动物，大多数能够飞行。它们是地球上最多样化的脊椎动物之一，约有10,000多种。</p>
+            
+            <div class="animal-gallery">
+                <div class="animal-card">
+                    <img src="./素材图片/鹰.jpg" alt="鹰">
+                    <div class="info">
+                        <h3>鹰</h3>
+                        <p>猛禽的代表，具有锐利的视力和强壮的爪子，是顶级的空中掠食者。</p>
+                    </div>
+                </div>
+                
+                <div class="animal-card">
+                    <img src="./素材图片/鹦鹉.jpg" alt="鹦鹉">
+                    <div class="info">
+                        <h3>鹦鹉</h3>
+                        <p>色彩鲜艳的鸟类，以其模仿人类语言的能力而闻名。</p>
+                    </div>
+                </div>
+                
+                <div class="animal-card">
+                    <img src="./素材图片/企鹅.jpg" alt="企鹅">
+                    <div class="info">
+                        <h3>企鹅</h3>
+                        <p>不会飞的海鸟，适应了南极和南半球其他地区的寒冷环境。</p>
+                    </div>
+                </div>
+            </div>
+            
+            <h3>鸟类的特征</h3>
+            <ul>
+                <li>全身覆盖羽毛</li>
+                <li>前肢特化为翅膀（大多数能飞）</li>
+                <li>坚硬的喙，无牙齿</li>
+                <li>轻而坚固的骨骼</li>
+                <li>高效的呼吸系统</li>
+                <li>产硬壳卵</li>
+            </ul>
+        </section>
+        
+        <section id="reptiles" class="animal-section">
+            <h2>爬行类动物</h2>
+            <p>爬行类是最早完全适应陆地生活的脊椎动物，包括龟、蜥蜴、蛇、鳄鱼等。它们具有干燥的鳞状皮肤，大多数产卵。</p>
+            
+            <div class="animal-gallery">
+                <div class="animal-card">
+                    <img src="./素材图片/鳄鱼.jpg" alt="鳄鱼">
+                    <div class="info">
+                        <h3>鳄鱼</h3>
+                        <p>现存最大的爬行动物之一，是高效的掠食者，已存在超过2亿年。</p>
+                    </div>
+                </div>
+                
+                <div class="animal-card">
+                    <img src="./素材图片/蟒蛇.jpg" alt="蟒蛇">
+                    <div class="info">
+                        <h3>蟒蛇</h3>
+                        <p>大型无毒蛇类，通过缠绕使猎物窒息而死。</p>
+                    </div>
+                </div>
+                
+                <div class="animal-card">
+                    <img src="./素材图片/海龟.jpg" alt="海龟">
+                    <div class="info">
+                        <h3>海龟</h3>
+                        <p>适应海洋生活的龟类，寿命可达100年以上。</p>
+                    </div>
+                </div>
+            </div>
+            
+            <h3>爬行类动物的特征</h3>
+            <ul>
+                <li>身体覆盖角质鳞片或甲壳</li>
+                <li>变温动物（冷血动物）</li>
+                <li>大多数产卵（有些为卵胎生）</li>
+                <li>用肺呼吸</li>
+                <li>四肢从身体侧面伸出或退化</li>
+            </ul>
+        </section>
+        
+        <section id="felines" class="animal-section">
+            <h2>猫科动物</h2>
+            <p>猫科动物是食肉目中高度特化的掠食者，包括家猫、狮子、老虎、豹等。它们以敏捷、力量和感官敏锐著称。</p>
+            
+            <div class="animal-gallery">
+                <div class="animal-card">
+                    <img src="./素材图片/狮子.jpg" alt="狮子">
+                    <div class="info">
+                        <h3>狮子</h3>
+                        <p>唯一群居的大型猫科动物，被称为"草原之王"。</p>
+                    </div>
+                </div>
+                
+                <div class="animal-card">
+                    <img src="./素材图片/老虎.jpg" alt="老虎">
+                    <div class="info">
+                        <h3>老虎</h3>
+                        <p>现存最大的猫科动物，独居生活，有强大的力量和游泳能力。</p>
+                    </div>
+                </div>
+                
+                <div class="animal-card">
+                    <img src="./素材图片/豹.jpg" alt="豹">
+                    <div class="info">
+                        <h3>豹</h3>
+                        <p>适应力最强的猫科动物之一，善于爬树并将猎物拖上树。</p>
+                    </div>
+                </div>
+            </div>
+            
+            <h3>猫科动物的特征</h3>
+            <ul>
+                <li>锋利的可伸缩爪子</li>
+                <li>敏锐的视觉、听觉和嗅觉</li>
+                <li>柔软的身体和灵活的脊柱</li>
+                <li>强大的颌骨和犬齿</li>
+                <li>大多数为独居动物（狮子除外）</li>
+                <li>夜行性或晨昏活动</li>
+            </ul>
+        </section>
+        
+        <section id="canines" class="animal-section">
+            <h2>犬科动物</h2>
+            <p>犬科动物包括狼、狐狸、豺和家犬等。它们是社会性动物，具有出色的嗅觉和耐力。</p>
+            
+            <div class="animal-gallery">
+                <div class="animal-card">
+                    <img src="./素材图片/狼.jpg" alt="狼" >
+                    <div class="info">
+                        <h3>狼</h3>
+                        <p>犬科动物的典型代表，具有复杂的社会结构和协作狩猎行为。</p>
+                    </div>
+                </div>
+                
+                <div class="animal-card">
+                    <img src="./素材图片/狐狸.jpg" alt="狐狸">
+                    <div class="info">
+                        <h3>狐狸</h3>
+                        <p>体型较小的犬科动物，以聪明和适应性强著称。</p>
+                    </div>
+                </div>
+                
+                <div class="animal-card">
+                    <img src="./素材图片/家犬.jpg" alt="家犬">
+                    <div class="info">
+                        <h3>家犬</h3>
+                        <p>人类最早驯化的动物之一，有数百个品种，大小、形态各异。</p>
+                    </div>
+                </div>
+            </div>
+            
+            <h3>犬科动物的特征</h3>
+            <ul>
+                <li>长吻部和发达的嗅觉</li>
+                <li>不可伸缩的爪子</li>
+                <li>发达的社会行为和群体生活</li>
+                <li>耐力型猎手（与猫科的力量型相对）</li>
+                <li>杂食性倾向较强</li>
+                <li>多种沟通方式（叫声、肢体语言、气味标记）</li>
+            </ul>
+        </section>
+    </div>
+    
+    <footer>
+        <p>&copy; 2025 动物世界 | 探索自然之美</p>
+        <p>本网站仅供教育用途</p>
+    </footer>
+</body>
+</html>
